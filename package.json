@@ -1,0 +1,48 @@
+{
+  "name": "@reupload/client",
+  "version": "0.1.0",
+  "description": "Browser client for Reupload uploads via your backend file router",
+  "type": "module",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./react": {
+      "types": "./dist/react/index.d.ts",
+      "import": "./dist/react/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test src/http.test.ts src/routes.test.ts src/client.test.ts src/validate.test.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "reupload",
+    "upload",
+    "browser",
+    "client"
+  ],
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": { "optional": true }
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.4",
+    "react": "^19.1.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}
