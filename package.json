@@ -1,6 +1,6 @@
 {
   "name": "@reupload/client",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Browser client for Reupload uploads via your backend file router",
   "type": "module",
   "license": "MIT",

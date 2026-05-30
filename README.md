@@ -4,7 +4,7 @@ Browser client for uploading files through **your backend file router** — neve
 
 Works in React, Next.js (App + Pages), SolidStart, Vite, and any environment with `fetch` and `FormData`.
 
-Pair with [`@reupload/sdk`](../reupload-sdk) on your server, or any API that implements the [default routes](#backend-file-router) below.
+Pair with [`@reupload/sdk`](https://www.npmjs.com/package/@reupload/sdk) on your server, or any API that implements the [default routes](#backend-file-router) below.
 
 ## Install
 
@@ -15,7 +15,7 @@ npm install @reupload/client
 Optional React hook:
 
 ```bash
-npm install @reupload/client react
+npm install @reupload/client
 ```
 
 ## Environment
@@ -70,7 +70,7 @@ const client = new ReuploadClient({
 });
 ```
 
-Use [`@reupload/sdk`](../reupload-sdk) on your server to implement these routes.
+Use [`@reupload/sdk`](https://www.npmjs.com/package/@reupload/sdk) on your server to implement these routes.
 
 ## API
 
@@ -146,7 +146,7 @@ Options:
 - `poll: true` — poll status after upload (default `false`)
 - `client` — reuse a configured `ReuploadClient`
 
-For server-side direct uploads (browser → your API → Reupload), use [`@reupload/sdk`](../reupload-sdk) on the server — not this package.
+For server-side direct uploads (browser → your API → Reupload), use [`@reupload/sdk`](https://www.npmjs.com/package/@reupload/sdk) on the server — not this package.
 
 ### Confirm before upload
 
@@ -173,7 +173,7 @@ const client = createReuploadClientFromEnv();
 await client.uploadFile(file);
 ```
 
-SolidStart server routes that receive uploads should use `@reupload/sdk/h3` instead.
+SolidStart server routes that receive uploads should use [`@reupload/sdk`](https://www.npmjs.com/package/@reupload/sdk)/h3 instead.
 
 ## Development
 
